@@ -20,19 +20,16 @@ class MapStore {
   async loadBackground() {
     if (this.background || this.loading) return;
 
-    // Check for local asset first
+    // Always prefer the local site map image as the mapping basemap.
+    // This expects `site_map_aerial.jpg` to be served from `/assets/`.
     const localMapPath = '/assets/site_map_aerial.jpg';
-    
+
     this.loading = true;
     try {
-      // In this specific environment, we'll try to use the local path.
-      // If you haven't uploaded it yet, the image might show as broken,
-      // so we'll stick to AI generation for now but allow easy override.
-      const imageUrl = await generateMapBackground();
-      this.background = imageUrl;
+      this.background = localMapPath;
       this.notify();
     } catch (error) {
-      console.error("Store failed to load map background:", error);
+      console.error("Store failed to load local map background:", error);
     } finally {
       this.loading = false;
     }
