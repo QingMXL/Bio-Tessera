@@ -1,6 +1,25 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+// Support both browser (Vite) and Node environments for the Gemini API key.
+// In the browser, use Vite-style env vars (e.g. VITE_GEMINI_API_KEY).
+// On the server/CLI, fall back to process.env.GEMINI_API_KEY.
+const browserApiKey =
+  (typeof import.meta !== "undefined" &&
+    (import.meta as any).env &&
+    ((import.meta as any).env.VITE_GEMINI_API_KEY ||
+      (import.meta as any).env.GEMINI_API_KEY)) ||
+  "";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const nodeApiKey =
+  typeof process !== "undefined" && (process as any).env
+    ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ((process as any).env.GEMINI_API_KEY as string) || ""
+    : "";
+
+const apiKey = browserApiKey || nodeApiKey || "";
+
+const ai = new GoogleGenAI({ apiKey });
 
 export const analyzeAgingImage = async (imageUrl: string) => {
   const fallback = {
