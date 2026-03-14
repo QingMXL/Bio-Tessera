@@ -2,15 +2,21 @@
 
 ![BIO-TESSERA Banner](https://github.com/QingMXL/Bio-Tessera/blob/main/assets/Bio-Tessera%20Community%20Scene.jpg)
 
-**BIO-TESSERA** is a cutting-edge, AI-powered management platform designed for the monitoring, maintenance, and evolution of mycelium-based architectural structures. It bridges the gap between residents, facility managers, and architects to ensure the structural integrity and aesthetic health of living buildings.
+**BIO-TESSERA** is an AI-assisted management platform designed for the monitoring, maintenance, and long-term evolution of mycelium-based architectural structures. The system connects residents, facility managers, and architects through a shared digital interface that supports the observation, analysis, and repair of living building materials.
+
+By integrating computer vision, environmental sensing, and collaborative design workflows, BIO-TESSERA enables the management of bio-based architecture as a dynamic material ecosystem rather than a static building envelope.
 
 ## 🌿 Overview
 
-As architectural paradigms shift towards sustainable, living materials, the need for specialized monitoring tools becomes paramount. BIO-TESSERA provides a comprehensive suite of tools to track the "aging" of mycelium facades, analyze surface degradation using computer vision, and facilitate collaborative design for bio-restoration.
+As architecture increasingly incorporates bio-based materials, new management tools are required to monitor their performance and transformation over time. Unlike conventional construction materials, mycelium composites continue to evolve after fabrication, responding to environmental conditions such as humidity, light exposure, and microbial activity.
+
+BIO-TESSERA provides a digital platform for tracking these changes and coordinating maintenance strategies. The system allows users to observe surface conditions, detect structural risks, and generate repair or redesign proposals through AI-assisted analysis.
+
+The platform functions not only as a monitoring dashboard but also as a collaborative infrastructure for the stewardship of living architecture.
 
 ## ✨ Key Features
 
-- **Real-time Monitoring**: Live (AI-simulated) camera feeds of critical structural sectors with a specialized Gothic/Brutalist aesthetic.
+- **Real-time Monitoring**: Live (AI-simulated) camera feeds display critical sectors of mycelium-based structures, allowing continuous observation of façade conditions and structural zones.
 - **AI Surface Analysis**: Upload images of mycelium surfaces to detect cracks, erosion, browning, and perforation using Gemini AI.
 - **Interactive Mapping**: A detailed, AI-generated site map for spatial tracking of monitoring points and risk levels.
 - **Collaborative Dialogue**: An AI-facilitated communication channel between residents and architects for maintenance and design discussions.
