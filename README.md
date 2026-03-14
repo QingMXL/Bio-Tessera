@@ -85,7 +85,7 @@ The platform functions not only as a monitoring dashboard but also as a collabor
 ## 🎨 Customization
 
 To use your own architectural photos instead of AI-generated ones:
-1. Place your images in `/public/assets/`.
+1. Place your images in `/assets/`.
 2. Name them according to the agreed-upon logic (e.g., `camera_p1_north_facade.jpg`).
 3. The system will automatically prioritize these local assets.
 
