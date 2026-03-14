@@ -1,20 +1,85 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# BIO-TESSERA: Mycelium Management System
 
-# Run and deploy your AI Studio app
+![BIO-TESSERA Banner](https://picsum.photos/seed/biotessera/1200/400?grayscale)
 
-This contains everything you need to run your app locally.
+**BIO-TESSERA** is a cutting-edge, AI-powered management platform designed for the monitoring, maintenance, and evolution of mycelium-based architectural structures. It bridges the gap between residents, facility managers, and architects to ensure the structural integrity and aesthetic health of living buildings.
 
-View your app in AI Studio: https://ai.studio/apps/bf2b58ef-f5ae-4a2f-9dda-ff7774d5e29d
+## 🌿 Overview
 
-## Run Locally
+As architectural paradigms shift towards sustainable, living materials, the need for specialized monitoring tools becomes paramount. BIO-TESSERA provides a comprehensive suite of tools to track the "aging" of mycelium facades, analyze surface degradation using computer vision, and facilitate collaborative design for bio-restoration.
 
-**Prerequisites:**  Node.js
+## ✨ Key Features
 
+- **Real-time Monitoring**: Live (AI-simulated) camera feeds of critical structural sectors with a specialized Gothic/Brutalist aesthetic.
+- **AI Surface Analysis**: Upload images of mycelium surfaces to detect cracks, erosion, browning, and perforation using Gemini AI.
+- **Interactive Mapping**: A detailed, AI-generated site map for spatial tracking of monitoring points and risk levels.
+- **Collaborative Dialogue**: An AI-facilitated communication channel between residents and architects for maintenance and design discussions.
+- **Automated Design Proposals**: AI-generated "Restore" vs. "Redesign" plans based on structural health evaluations.
+- **Material Lab**: Track the growth cycles and health of fresh mycelium batches used for repairs.
+- **Alert Center**: Centralized management of structural and surface-level alerts with severity tracking.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **AI Engine**: Google Gemini API (`@google/genai`)
+- **Icons**: Lucide React
+- **Animations**: Motion (Framer Motion)
+- **Build Tool**: Vite
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- A Google Gemini API Key
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/bio-tessera.git
+   cd bio-tessera
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory and add your Gemini API key:
+   ```env
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the app**:
+   Navigate to `http://localhost:3000` in your browser.
+
+## 📂 Project Structure
+
+- `/src/pages`: Individual application views (Dashboard, Mapping, Dialogue, etc.)
+- `/src/components`: Reusable UI components.
+- `/src/services`: Gemini AI integration and API logic.
+- `/src/stores`: State management for camera feeds and map backgrounds.
+- `/public/assets`: Directory for custom architectural photos and site maps.
+
+## 🎨 Customization
+
+To use your own architectural photos instead of AI-generated ones:
+1. Place your images in `/public/assets/`.
+2. Name them according to the agreed-upon logic (e.g., `camera_p1_north_facade.jpg`).
+3. The system will automatically prioritize these local assets.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+*Developed for the future of living architecture.*
