@@ -17,12 +17,17 @@ The platform functions not only as a monitoring dashboard but also as a collabor
 ## ✨ Key Features
 
 - **Real-time Monitoring**: Live (AI-simulated) camera feeds display critical sectors of mycelium-based structures, allowing continuous observation of façade conditions and structural zones.
-- **AI Surface Analysis**: Upload images of mycelium surfaces to detect cracks, erosion, browning, and perforation using Gemini AI.
-- **Interactive Mapping**: A detailed, AI-generated site map for spatial tracking of monitoring points and risk levels.
-- **Collaborative Dialogue**: An AI-facilitated communication channel between residents and architects for maintenance and design discussions.
+- **AI Surface Analysis**: Users can upload photographs of mycelium surfaces. The system analyzes the images to detect:
+- cracking  
+- erosion  
+- browning  
+- biological perforation  
+- surface deformation  
+- **Interactive Mapping**: An AI-generated site map visualizes monitoring locations and highlights risk zones. This enables spatial tracking of façade conditions across an entire building or neighborhood.
+- **Collaborative Dialogue**: BIO-TESSERA provides a communication interface where residents, maintenance teams, and architects can exchange information, report issues, and discuss design responses.
 - **Automated Design Proposals**: AI-generated "Restore" vs. "Redesign" plans based on structural health evaluations.
-- **Material Lab**: Track the growth cycles and health of fresh mycelium batches used for repairs.
-- **Alert Center**: Centralized management of structural and surface-level alerts with severity tracking.
+- **Material Lab**: Tracks the growth cycles and health conditions of new mycelium batches prepared for repair and replacement.
+- **Alert Center**: Centralized alert management for structural warnings and surface deterioration events, with severity classification and monitoring history.
 
 ## 🛠️ Tech Stack
 
