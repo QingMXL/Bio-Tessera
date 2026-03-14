@@ -1,0 +1,7 @@
+{
+  "name": "Bio-Tessera",
+  "description": "A management platform for mycelium-based architecture, monitoring aging, AI detection, and collaborative restoration.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
