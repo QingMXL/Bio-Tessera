@@ -96,7 +96,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *Developed for the future of living architecture.*
-## What Next
+
+---
+
+## !!!What Next
 
 The current version of Bio-Tessera is a **conceptual prototype**, developed as part of the author’s master’s level architectural design project.
 Project page:  
