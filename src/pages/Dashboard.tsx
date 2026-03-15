@@ -28,11 +28,11 @@ export default function Dashboard({ role, points, alerts, tasks }: Props) {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
         {stats.map((stat, i) => (
-          <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-black/5">
+          <div key={i} className="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-sm border border-black/5">
             <div className="flex justify-between items-start mb-4">
               <div className="p-2 bg-[#F5F2ED] rounded-lg">
                 <stat.icon size={20} className="text-[#A3B18A]" />
@@ -42,23 +42,23 @@ export default function Dashboard({ role, points, alerts, tasks }: Props) {
                 {stat.trend}
               </div>
             </div>
-            <p className="text-2xl font-bold tracking-tight">{stat.value}</p>
-            <p className="text-xs text-black/40 uppercase tracking-wider font-medium mt-1">{stat.label}</p>
+            <p className="text-xl sm:text-2xl font-bold tracking-tight">{stat.value}</p>
+            <p className="text-[10px] sm:text-xs text-black/40 uppercase tracking-wider font-medium mt-1">{stat.label}</p>
           </div>
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
         {/* Recent Monitoring Points */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
           <div className="flex justify-between items-center">
-            <h3 className="text-lg font-medium">Critical Monitoring Points</h3>
-            <button className="text-xs text-[#A3B18A] font-bold uppercase tracking-widest hover:underline">View All</button>
+            <h3 className="text-base sm:text-lg font-medium">Critical Monitoring Points</h3>
+            <button className="text-xs text-[#A3B18A] font-bold uppercase tracking-widest hover:underline touch-manipulation py-1">View All</button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {points.slice(0, 2).map(point => (
-              <div key={point.id} className="bg-white rounded-2xl overflow-hidden border border-black/5 group cursor-pointer">
-                <div className="h-40 overflow-hidden relative bg-[#141414] flex items-center justify-center">
+              <div key={point.id} className="bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-black/5 group cursor-pointer">
+                <div className="h-36 sm:h-40 overflow-hidden relative bg-[#141414] flex items-center justify-center">
                   {feeds[point.id] ? (
                     <img src={feeds[point.id]!} alt={point.name} referrerPolicy="no-referrer" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   ) : (
@@ -70,8 +70,8 @@ export default function Dashboard({ role, points, alerts, tasks }: Props) {
                     {point.status}
                   </div>
                 </div>
-                <div className="p-4">
-                  <h4 className="font-medium">{point.name}</h4>
+                <div className="p-3 sm:p-4">
+                  <h4 className="font-medium text-sm sm:text-base">{point.name}</h4>
                   <p className="text-xs text-black/40 mb-3">{point.location}</p>
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
@@ -89,14 +89,14 @@ export default function Dashboard({ role, points, alerts, tasks }: Props) {
         </div>
 
         {/* Recent Alerts */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <div className="flex justify-between items-center">
-            <h3 className="text-lg font-medium">Recent Alerts</h3>
-            <button className="text-xs text-[#A3B18A] font-bold uppercase tracking-widest hover:underline">History</button>
+            <h3 className="text-base sm:text-lg font-medium">Recent Alerts</h3>
+            <button className="text-xs text-[#A3B18A] font-bold uppercase tracking-widest hover:underline touch-manipulation py-1">History</button>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {alerts.slice(0, 3).map(alert => (
-              <div key={alert.id} className="bg-white p-4 rounded-xl border border-black/5 flex gap-4 items-start">
+              <div key={alert.id} className="bg-white p-3 sm:p-4 rounded-xl border border-black/5 flex gap-3 sm:gap-4 items-start">
                 <div className={`mt-1 w-2 h-2 rounded-full shrink-0 ${
                   alert.severity === 'high' ? 'bg-red-500' : alert.severity === 'medium' ? 'bg-yellow-500' : 'bg-blue-500'
                 }`} />
@@ -107,8 +107,8 @@ export default function Dashboard({ role, points, alerts, tasks }: Props) {
                   </div>
                   <p className="text-xs text-black/60 line-clamp-2">{alert.description}</p>
                   <div className="mt-3 flex gap-2">
-                    <button className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-[#141414] text-white rounded">Inspect</button>
-                    <button className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-black/10 rounded">Dismiss</button>
+                    <button className="text-[10px] font-bold uppercase tracking-widest px-3 py-2 sm:py-1.5 bg-[#141414] text-white rounded touch-manipulation">Inspect</button>
+                    <button className="text-[10px] font-bold uppercase tracking-widest px-3 py-2 sm:py-1.5 border border-black/10 rounded touch-manipulation">Dismiss</button>
                   </div>
                 </div>
               </div>

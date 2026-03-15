@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+/* Ensure app root fills viewport so layout works */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Mobile: safe area for notched devices and bottom nav */
+.safe-area-pb {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
