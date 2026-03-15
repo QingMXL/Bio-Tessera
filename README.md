@@ -2,7 +2,7 @@
 
 **English** | [简体中文说明](./README-zh.md)
 
-![BIO-TESSERA Banner](https://github.com/QingMXL/Bio-Tessera/blob/main/assets/Bio-Tessera%20Community%20Scene.jpg)
+![BIO-TESSERA Banner](https://github.com/QingMXL/Bio-Tessera/blob/main/public/assets/Bio-Tessera%20Community%20Scene.jpg)
 
 **BIO-TESSERA** is an AI-assisted management platform designed for the monitoring, maintenance, and long-term evolution of mycelium-based architectural structures. The system connects residents, facility managers, and architects through a shared digital interface that supports the observation, analysis, and repair of living building materials.
 
@@ -85,9 +85,9 @@ The platform functions not only as a monitoring dashboard but also as a collabor
 ## 🎨 Customization
 
 To use your own architectural photos instead of AI-generated ones:
-1. Place your images in `/assets/`.
+1. Place your images in `public/assets/`.
 2. Name them according to the agreed-upon logic (e.g., `camera_p1_north_facade.jpg`).
-3. The system will automatically prioritize these local assets.
+3. The system will automatically prioritize these local assets. (Vite copies `public/` into the build output so assets are available when deploying to Vercel or other hosts.)
 
 ## 📄 License
 

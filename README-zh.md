@@ -2,7 +2,7 @@
 
 [English README](./README.md) | **简体中文说明**
 
-![BIO-TESSERA Banner](https://github.com/QingMXL/Bio-Tessera/blob/main/assets/Bio-Tessera%20Community%20Scene.jpg)
+![BIO-TESSERA Banner](https://github.com/QingMXL/Bio-Tessera/blob/main/public/assets/Bio-Tessera%20Community%20Scene.jpg)
 
 **BIO-TESSERA** 是一个面向菌丝体建筑的 AI 辅助管理平台，用于对基于菌丝体的建筑结构进行监测、维护以及长期演化管理。  
 系统通过一个共享的数字界面，将居民、设施管理者与建筑师连接在一起，支持对“活体建筑材料”的观察、分析与修复决策。
@@ -147,15 +147,15 @@
 
 如果你想用自己的建筑 / 社区真实照片替换默认图像：
 
-1. 将图片放入 `assets/` 目录；
+1. 将图片放入 `public/assets/` 目录；
 2. 按约定的命名规则命名，例如：
 
    ```text
    camera_p1_north_facade.jpg
    ```
 
-3. 应用会优先使用这些本地资源：  
-   - 在 Mapping 页面中，可以通过将 `site_map_aerial.jpg` 放入 `public/assets/` 目录，并在地图状态中引用 `/assets/site_map_aerial.jpg` 来作为底图。
+3. 应用会优先使用这些本地资源（Vite 会将 `public/` 下的文件复制到构建输出，部署到 Vercel 等平台时可正常访问）。  
+   - 在 Mapping 页面中，将 `site_map_aerial.jpg` 放在 `public/assets/` 下即可作为底图，代码中通过 `/assets/site_map_aerial.jpg` 引用。
 
 ## 📄 许可证
 
